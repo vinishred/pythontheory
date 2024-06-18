@@ -61,7 +61,7 @@ def is_major_user() -> None:
 # is_major_user()
 
 #theoreme de pythagore
-print("Faisons le theoreme de pythagore !")
+# print("Faisons le theoreme de pythagore !")
 def pythagore(value1: float, value2: float) -> None:
     cote1: float = float(value1**2)
     cote2: float = float(value2**2)
@@ -87,4 +87,25 @@ def pythagore_user() -> None:
         print ("votre choix n'est pas valide !")
         return pythagore_user()
 
-pythagore_user()
+# pythagore_user()
+
+#on fait les factoriels d'un nombre
+def factorielle(nombre : int):
+    if nombre <= 0:
+        return 0
+    elif nombre == 1:
+        return 1
+    else:
+        #1ere methode
+        # fact = 1
+        # for i in range(1, nombre+1):
+        #     fact *= i
+        # print("Factoriel de ", nombre, " est ", fact)
+
+        #2eme methode
+        # print("Factoriel de ", nombre, " est ", math.factorial(nombre))
+
+        #3eme methode
+        return nombre * factorielle(nombre - 1)
+
+print(factorielle(5))
